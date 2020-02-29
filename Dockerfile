@@ -2,7 +2,11 @@
 #   Agda
 ###################################################
 
-FROM ednutting/jekyll-haskell-stack
+# Note: Give your Docker instance 4 CPUs and 8GB RAM minimum or the build may randomly fail
+
+ARG JEKYLL_STACK_IMAGE=ednutting/jekyll-haskell-stack:latest
+
+FROM $JEKYLL_STACK_IMAGE
 
 RUN apk add icu-libs
 

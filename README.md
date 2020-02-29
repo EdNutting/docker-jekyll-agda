@@ -20,3 +20,5 @@ ENV PATH=/root/.local/bin:$PATH
 COPY --from=ednutting/jekyll-agda /agda/.stack-work/install /agda/.stack-work/install
 COPY --from=ednutting/jekyll-agda /root/.local/bin/agda /root/.local/bin/agda
 ```
+
+Note: Give your Docker instance 4 CPUs and 8GB RAM minimum or the build may randomly fail.
