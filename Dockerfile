@@ -13,9 +13,9 @@ ENV PATH=/root/.local/bin:$PATH
 
 # Download Agda
 WORKDIR /
-ARG AGDA_VERSION="2.6.0.1"
+ARG AGDA_VERSION="2.6.1"
 RUN echo "Installing Agda version: ${AGDA_VERSION}"
-RUN git clone --branch "v${AGDA_VERSION}" https://github.com/agda/agda.git
+RUN git clone --branch "release-${AGDA_VERSION}" https://github.com/agda/agda.git
 
 # Install Agda
 WORKDIR /agda
